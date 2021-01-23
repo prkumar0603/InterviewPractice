@@ -20,7 +20,6 @@ public class Solution2 {
         
         list.printNthNodeUsingTwoPointer(3);
     }
-
 }
 
 class DemoLinkedList{
