@@ -12,6 +12,7 @@ public class hashmapFunction {
         for (char x:s.toCharArray()) {
             if (x!=32)  //32 is the ascii of space
             map.put(x, map.getOrDefault(x, 0) + 1);
+            // map.getOrDefault(key_whose_value_is_to_be_fetched, default_value)
         }
         System.out.println(map);
 
