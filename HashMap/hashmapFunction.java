@@ -17,12 +17,17 @@ public class hashmapFunction {
         System.out.println(map);
 
         // to iterate over a HashMap
+        for(Integer i:map.keySet()){
+            System.out.println(i+"->"+map.get(i));
+        }
+        
+        // 2nd method
         Iterator<Integer> it = map.keySet().iterator();
         while (it.hasNext()){
             int key = (int)it.next();
             System.out.println(key+" - "+map.get(key));
         }
-        // 2nd method
+        // 3rd method
         for (Map.Entry<Character,Integer> e:map.entrySet())
             System.out.println(e.getKey()+" "+e.getValue());
 
