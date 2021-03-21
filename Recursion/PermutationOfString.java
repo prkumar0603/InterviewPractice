@@ -1,5 +1,9 @@
 package recursion;
-
+/* print all permutation of a string.
+Example
+Input - ABC
+Output - ABC ACB BAC BCA CBA CAB
+*/
 public class PermutationOfString {
     public static void main(String[] args) {
         String str = "ABC";
