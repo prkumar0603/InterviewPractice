@@ -18,6 +18,7 @@ public class MinOrMaxOfAnArray {
         return Math.max(arr[i], getMax(arr, i+1, n-1));
     }
     private static int getMin(int[] arr, int i, int n) {
+        // return Arrays.stream(arr).min().getAsInt();
 
         return (n==1) ? arr[i] : Math.min(arr[i], getMin(arr, i+1, n-1));
     }
@@ -33,3 +34,7 @@ public class MinOrMaxOfAnArray {
 //        return ans;
 //    }
 }
+/* library function to get max and min - 
+    Arrays.stream(arr).max().getAsInt();
+    Arrays.stream(arr).min().getAsInt();
+*/
