@@ -29,22 +29,26 @@ public class deleteKthNodeFromLinkedList {
     /*Approach - recursively reduce value of k. When k reaches 1, we delete current node
     and return next of current node as new node
     */
-    private static DemoLinkedList.Node solve(DemoLinkedList.Node start, int k) {
+    private static DemoLinkedList.Node solve(DemoLinkedList.Node head, int k) {
         if (k < 1)
-            return start;
+            return head;
 
-        if (start == null) {
+        if (head == null) {
             System.out.println("List is Empty or limit crossed");
             return null;
         }
 
         if (k==1){
-            DemoLinkedList.Node res = start.next;
-            return res;
+            head.val = head.next.val;       // putting next node value in current node
+            head.next = head.next.next;     // removing next node
+            return head;
+//            DemoLinkedList.Node res = head.next;
+//            return res;
         }
 
-        start.next = solve(start.next, k-1);
-        return start;
+        head.next = solve(head.next, k-1);  // if stored to head, then head will get changed.
+        // thats why stored to head.next
+        return head;
     }
 
 }
