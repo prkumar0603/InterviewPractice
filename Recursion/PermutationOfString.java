@@ -10,16 +10,16 @@ public class PermutationOfString {
         permute(str, str.length(), 0);
     }
 
-    private static void permute(String str, int n, int i) {
-        if (n == i+1){
+    private static void permute(String str, int n, int start) {
+        if (n == start+1){
             System.out.print(str+" ");
             return;
         }
         else{
-            for (int j=i;j<n;j++){
-                String s = swap(str, i, j);
-                permute(s, n, i+1);
-                s = swap(str, i, j);
+            for (int i=start;i<n;i++){
+                str = swap(str, start, i);
+                solve(str, n, start+1);
+                str = swap(str, start, i);
             }
         }
     }
