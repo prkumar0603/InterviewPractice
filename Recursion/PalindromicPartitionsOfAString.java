@@ -20,17 +20,17 @@ public class PalindromicPartitionsOfAString {
         printAll(str, "", 0);
     }
 
-    private static void printAll(String str, String output, int i) {
+    private static void printAll(String str, String output, int start) {
         int n = str.length();
-        if (i==n){
+        if (n == start){
             System.out.println(output.substring(1));    // substring is added to remove first space
             return;
         }
 
-        for (int j=i;j<n;j++){
-            boolean val = palindrome(str,i, j);
+        for (int j=start;j<n;j++){
+            boolean val = palindrome(str,start, j);
             if (val)
-                printAll(str, output + " "+ str.substring(i,j+1), j+1);
+                printAll(str, output + " "+ str.substring(start,j+1), start+1);
         }
     }
 
