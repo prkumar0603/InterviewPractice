@@ -1,7 +1,4 @@
 package recursion;
-
-import java.util.ArrayList;
-
 /*
 Given a string, find all possible palindromic partitions of given string.
 Example
@@ -22,19 +19,19 @@ public class PalindromicPartitionsOfAString {
 
     private static void printAll(String str, String output, int start) {
         int n = str.length();
-        if (n == start){
+        if (start == n){
             System.out.println(output.substring(1));    // substring is added to remove first space
             return;
         }
 
-        for (int j=start;j<n;j++){
-            boolean val = palindrome(str,start, j);
+        for (int i=start; i < n; i++){
+            boolean val = palin(str,start, i);
             if (val)
-                printAll(str, output + " "+ str.substring(start,j+1), start+1);
+                printAll(str, output + " "+ str.substring(start,i+1), i+1);
         }
     }
 
-    private static boolean palindrome(String str, int i, int j) {
+    private static boolean palin(String str, int i, int j) {
         while(i < j){
             if (str.charAt(i) != str.charAt(j))
                 return false;
