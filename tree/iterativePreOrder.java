@@ -23,14 +23,14 @@ public class iterativePreOrder {
         Stack<demoNode> stack = new Stack<>();
         stack.push(root);
         while (!stack.isEmpty()){
-            demoNode temp = stack.pop();
-            System.out.print(temp.val+" ");
+            root = stack.pop();
+            System.out.print(root.val+" ");
 
-            if (temp.right != null)
-                stack.push(temp.right);
+            if (root.right != null)
+                stack.push(root.right);
 
-            if (temp.left != null)
-                stack.push(temp.left);
+            if (root.left != null)
+                stack.push(root.left);
 
         }
     }
