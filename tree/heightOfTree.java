@@ -30,3 +30,6 @@ public class heightOfTree {
         return height;
     }
 }
+/* Height and Depth of tree are equal. but height and depth of a node are different. Height is measured from 
+   the bottom and depth is measured from the top.
+*/
