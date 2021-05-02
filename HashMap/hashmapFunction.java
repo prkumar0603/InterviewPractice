@@ -16,7 +16,7 @@ public class hashmapFunction {
         }
         System.out.println(map);
 
-        // to iterate over a HashMap
+        // to iterate over a HashMap : map.values() or map.keySet()
         for(Integer i:map.keySet()){
             System.out.println(i+"->"+map.get(i));
         }
