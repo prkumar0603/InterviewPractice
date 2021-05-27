@@ -28,11 +28,11 @@ public class DetectCycleInDirectedGraphBFS {
         obj.addEdge(2,0);
 
         // obj.printList();
-        boolean res = obj.isCyclic(0);
+        boolean res = obj.isCyclic();
         System.out.println(res);
     }
 
-    private boolean isCyclic(int s) {
+    private boolean isCyclic() {
         int[] indegree = new int[number_of_vertex];
         Queue<Integer> queue = new LinkedList<>();
 
