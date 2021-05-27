@@ -26,11 +26,11 @@ public class DetectCycleInDirectedGraphDFS {
         obj.addEdge(2,0);
 
         // obj.printList();
-        boolean res = obj.isCyclic(0);
+        boolean res = obj.isCyclic();
         System.out.println(res);
     }
 
-    private boolean isCyclic(int s) {
+    private boolean isCyclic() {
         boolean[] visited = new boolean[number_of_vertex];
         boolean[] order = new boolean[number_of_vertex];
 
