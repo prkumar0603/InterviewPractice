@@ -28,7 +28,7 @@ public class printSubSequence {
             return ans;
         }
 
-        // get smaller answers
+        // calling subsequence on lesser part of string
         String[] smallAns = findSubSequence(str.substring(1));
 
         // now add the new character with answers from previous.
@@ -47,5 +47,21 @@ public class printSubSequence {
 
         return ans;
     }
+    
+    
+    // printing all subsequence of a string
+    private static void printAllSubSeq(String str, String out) {
+        if (str.length() == 0){
+            System.out.println(out);
+            return;
+        }
+
+        // add the first character in answer
+        printAllSubSeq(str.substring(1), out + str.charAt(0));
+
+        // not adding first character in answer
+        printAllSubSeq(str.substring(1), out);
+    }
+    
 }
 /* explanation from coding ninja video */
