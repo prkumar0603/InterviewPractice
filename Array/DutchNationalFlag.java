@@ -5,7 +5,7 @@ Follow-up question 1: Do this in constant space
 Follow-up question 2: Do this in a single iteration
 Dutch National Flag Problem
  */
-public class Solution8 {
+public class DutchNationalFlag {
     static int arr[] = {0,1,1,0,1,2,1,2,0,0,0,1};
     public static void main(String[] args) {
 
@@ -22,7 +22,7 @@ public class Solution8 {
                     break;
                 case 2:
                     swap(mid,high);
-                    high--;					//in case 2 we dont increment mid as array in front is not sorted
+                    high--;					//we dont increment mid as any element may come from front of array. check that element again
                     break;
             }
         }
