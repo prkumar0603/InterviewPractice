@@ -1,3 +1,5 @@
+package Array;
+
 /*Find a subArray with maximum sum. */
 public class kadaneAlgorithm {
 
