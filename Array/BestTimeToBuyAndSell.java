@@ -22,13 +22,12 @@ public class BestTimeToBuyAndSell {
         int max_profit = 0;
         int min = Integer.MAX_VALUE;
 
-        for (int i=0;i<prices.length;i++){
-            if (prices[i] < min){
+        for (int i = 0; i < prices.length; i++) {
+            if (prices[i] < min) {
                 min = prices[i];
-            }
-            else if(prices[i]-min < max_profit){
-                max_profit = prices[i] - min;
-            }
+            } 
+            else
+                max_profit = Math.max(max_profit, prices[i] - min);
         }
 
         System.out.println("max = "+ max_profit);
