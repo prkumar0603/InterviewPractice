@@ -21,6 +21,8 @@ public class BestTimeToBuyAndSell {
         int[] prices = {7,1,5,3,6,4};
         int max_profit = 0;
         int min = Integer.MAX_VALUE;
+        
+        // to maximise the profit, buy on lowest day and sell on highest day.
 
         for (int i = 0; i < prices.length; i++) {
             if (prices[i] < min) {
@@ -34,7 +36,4 @@ public class BestTimeToBuyAndSell {
 
     }
 }
-/*Approach - traverse thru the array. two condition possible -
-1) current price < minimum
-2) find difference between current element and minimum is < max_profit.
- */
+/*Approach - we will traverse through the array to find the minimum element and simultaneously check the profit with each element.*/
